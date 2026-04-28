@@ -1,0 +1,118 @@
+{
+  "project_name": "Unbiased AI Decision Dashboard",
+  "theme": "light",
+  "archetype": "Archetype 4 (Swiss & High-Contrast)",
+  "core_philosophy": "Color is Function Only. 95% of the UI should be monochrome. Color exists only to guide action or flag bias severity. Truth, objective analysis, and authority are the primary emotional drivers.",
+  "typography": {
+    "instructions": "Avoid Inter for headings. Use fluid typography.",
+    "primary_font_headings": "Cabinet Grotesk",
+    "primary_font_body": "Inter",
+    "mono_font_metrics": "JetBrains Mono",
+    "hierarchy": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl tracking-tighter font-black",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl tracking-tight font-bold",
+      "h3": "text-xl sm:text-2xl tracking-tight font-semibold",
+      "h4": "text-lg sm:text-xl font-medium",
+      "body": "text-base leading-relaxed text-zinc-600",
+      "overline": "text-xs font-bold uppercase tracking-[0.2em] text-zinc-500",
+      "metrics_large": "text-4xl sm:text-5xl font-mono tracking-tight font-medium"
+    }
+  },
+  "colors": {
+    "backgrounds": {
+      "base": "#FFFFFF",
+      "surface": "#F4F4F5",
+      "surface_hover": "#E4E4E7",
+      "header": "rgba(255, 255, 255, 0.8)"
+    },
+    "text": {
+      "primary": "#09090B",
+      "secondary": "#71717A",
+      "inverse": "#FFFFFF",
+      "muted": "#A1A1AA"
+    },
+    "borders": {
+      "default": "#E4E4E7",
+      "focus": "#09090B"
+    },
+    "accents": {
+      "primary_action": "#002FA7",
+      "primary_hover": "#002075",
+      "severity_high": "#DC2626",
+      "severity_medium": "#F59E0B",
+      "severity_low": "#16A34A",
+      "neutral_highlight": "#27272A"
+    },
+    "chart_palette": {
+      "demographic_a": "#09090B",
+      "demographic_b": "#A1A1AA",
+      "demographic_c": "#E4E4E7",
+      "bias_flag": "#DC2626"
+    }
+  },
+  "spacing_and_layout": {
+    "general": "Generous spacing. Containers with borders MUST have p-6 or p-8 padding.",
+    "dashboard_grid": "MODE B: 'Control Room' Grid. grid-cols-1 md:grid-cols-3 lg:grid-cols-4 with gap-6.",
+    "landing_grid": "MODE A: 'Tetris' Grid. Asymmetrical layouts with negative space.",
+    "surfaces": "Grid Borders (The 'Technical' Look). Use border-collapse and 1px solid borders. No soft drop shadows. If shadow is needed, use sharp brutalist shadow (e.g. shadow-[4px_4px_0_0_#09090B]) or no shadow at all. For dashboards, stick to flat solid white cards with zinc-200 borders.",
+    "glassmorphism": "Only for the sticky header (backdrop-blur-xl bg-white/80 border-b border-zinc-200)."
+  },
+  "interactions_and_motion": {
+    "hover_states": "Buttons should shift background color explicitly (e.g., hover:bg-zinc-800 hover:text-white). Metric cards should have slight lift (-translate-y-1) and border color darken to zinc-400.",
+    "transitions": "Use specific properties: transition: transform 0.2s ease, opacity 0.2s ease, border-color 0.2s ease.",
+    "testing": "All interactive and key informational elements MUST have a data-testid attribute in kebab-case (e.g., data-testid='upload-csv-button')."
+  },
+  "component_strategies": {
+    "buttons": "Sharp corners (rounded-none or rounded-sm). High contrast. Primary CTA is solid Black or Klein Blue. Secondary CTA is outlined.",
+    "cards": "Cardless or strictly rectangular flat cards with 1px border. No border-radius larger than 4px (rounded-sm).",
+    "forms": "Use Shadcn UI Input/Select. Solid borders, clear focus rings (focus:ring-2 focus:ring-black).",
+    "charts": "Use Recharts (via Shadcn if possible). Stick to monochrome (blacks/grays) for normal data, and strictly red for the anomaly/bias line.",
+    "icons": "Use lucide-react (already installed). Keep icon stroke width thin (1.5) for elegance."
+  },
+  "pages_and_features": {
+    "landing_page": {
+      "strategy": "High visual impact. Black and white hero section with large fluid typography. Use a prominent bento grid for explaining 'Demographic Parity', 'Disparate Impact', etc.",
+      "hero_image": "Abstract minimalist architecture to represent 'structure' and 'truth'."
+    },
+    "auth": {
+      "strategy": "Split layout. Left side: High-contrast abstract image or black panel with a striking quote about fairness. Right side: Minimalist login/signup form."
+    },
+    "dashboard_list": {
+      "strategy": "Technical table view. Focus on data density. Use Shadcn Table component. Highlight failed audits in red."
+    },
+    "upload_flow": {
+      "strategy": "Stepped process. Clean file dropzone. Clear column mapping UI. Use Shadcn Select for assigning 'Protected Attribute' and 'Outcome'."
+    },
+    "analysis_results": {
+      "strategy": "The 'Control Room'. Top row: Big metric numbers in JetBrains Mono. Middle: Monochrome charts with red flags for bias. Bottom: Gemini AI explanation in a highlighted technical block (like a terminal or pure white clean box with Klein Blue border).",
+      "ai_explanation": "Use a subtle 'Tracing Beam' or glowing border to highlight the AI-generated insights."
+    }
+  },
+  "image_urls": [
+    {
+      "url": "https://images.unsplash.com/photo-1602577121285-aca49920efac?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTV8MHwxfHNlYXJjaHwxfHx3aGl0ZSUyMG1pbmltYWxpc3QlMjBhcmNoaXRlY3R1cmV8ZW58MHx8fHwxNzc3MzUwMTk1fDA&ixlib=rb-4.1.0&q=85",
+      "category": "hero_background",
+      "description": "White minimalist concrete architecture. Use as a subtle backdrop or hero side-image on the landing page to convey structure and objectivity."
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1637489415491-f9622f751216?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTV8MHwxfHNlYXJjaHw0fHx3aGl0ZSUyMG1pbmltYWxpc3QlMjBhcmNoaXRlY3R1cmV8ZW58MHx8fHwxNzc3MzUwMTk1fDA&ixlib=rb-4.1.0&q=85",
+      "category": "auth_background",
+      "description": "White building with a clock. Symbolizes time/auditing. Use on the left side of the Auth split screen."
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1540172777610-b15b605dd68d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODB8MHwxfHNlYXJjaHwzfHxibGFjayUyMGFuZCUyMHdoaXRlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzc3MzUwMTk1fDA&ixlib=rb-4.1.0&q=85",
+      "category": "testimonial_avatar_1",
+      "description": "Black and white portrait of a woman. Use for AI Ethicist testimonial on landing page."
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1618284554746-71a7b3e923c6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODB8MHwxfHNlYXJjaHw0fHxibGFjayUyMGFuZCUyMHdoaXRlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzc3MzUwMTk1fDA&ixlib=rb-4.1.0&q=85",
+      "category": "testimonial_avatar_2",
+      "description": "Black and white portrait of a man in hoodie. Use for Data Scientist testimonial."
+    }
+  ],
+  "libraries_to_install": [
+    "lucide-react",
+    "recharts",
+    "framer-motion"
+  ]
+}
